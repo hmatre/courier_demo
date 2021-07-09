@@ -1,0 +1,80 @@
+
+<div class="container">
+  <h1>Send Courier</h1>
+  <%= form_for(@order, url: orders_path(@order)) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :sender_name %>
+      <%= f.text_field :sender_name, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :sender_email %>
+      <%= f.text_field :sender_email, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :sender_address %>
+      <%= f.text_field :sender_address, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :sender_mobile_number %>
+      <%= f.text_field :sender_mobile_number, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :sender_pincode %>
+      <%= f.text_field :sender_pincode, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :receiver_name %>
+      <%= f.text_field :receiver_name, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :receiver_email %>
+      <%= f.text_field :receiver_email, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :receiver_address %>
+      <%= f.text_field :receiver_address, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :receiver_mobile_number %>
+      <%= f.text_field :receiver_mobile_number, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :receiver_pincode %>
+      <%= f.text_field :receiver_pincode, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :parcel_weight %>
+      <%= f.text_field :parcel_weight, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :service_type %>
+      <%= f.select(:service_type, [['speed_post', 'speed_post'], ['regular', 'regular']], { :include_blank => '-- Select service type --' }, {:class => 'form-control'}) %>
+      <%#= f.text_field :service_type, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :service_charges %>
+      <%= f.text_field :service_charges, class: 'form-control', :required => true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :payment_mode %>
+      <%= f.select(:payment_mode, [['cod', 'cod'], ['prepaid', 'prepaid']], { :include_blank => '-- Select payment mode --' }, {:class => 'form-control'}) %>
+    </div>
+
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  <% end %>
+
+</div>

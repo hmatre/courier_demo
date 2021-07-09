@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Welcome</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <%= link_to 'Send New Courier', new_order_path, class: 'btn btn-primary' %>
+      </div>
+      <div class="col">
+        <%= form_tag(track_courier_status_orders_path, method: :get) do %>
+          <%= text_field_tag(:tracking_reference_number, params[:tracking_reference_number], placeholder: "enter your tracker reference number") %>
+          <%= submit_tag 'Track Your Courier' , class: 'btn btn-primary'%>
+        <% end %>
+        <%#= link_to 'Track Your Courier', track_courier_status_orders_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+</div>

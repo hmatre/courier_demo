@@ -1,0 +1,66 @@
+<div class="container">
+  <h1>Courier Detail</h1>
+  <div class="container">
+    <div>
+      <table class="table table-bordered">
+        <tr>
+          <th>Field</th>
+          <th>Details</th>
+          <tr>
+            <td>Sender Name </td>
+            <td><%= @order.sender_name%></td>
+          </tr>
+          <tr>
+            <td>Sender Moblie Number </td>
+            <td><%=@order.sender_mobile_number %></td>
+          </tr>
+          <tr>
+            <td>Sender Address </td>
+            <td><%=@order.sender_address %></td>
+          </tr>
+          <tr>
+            <td>Sender Pincode </td>
+            <td><%=@order.sender_pincode %></td>
+          </tr>
+          <tr>
+            <td>Receiver Name </td>
+            <td><%= @order.receiver_name%></td>
+          </tr>
+          <tr>
+            <td>Receiver Moblie Number </td>
+            <td><%=@order.receiver_mobile_number %></td>
+          </tr>
+          <tr>
+            <td>Receiver Address </td>
+            <td><%=@order.receiver_address %></td>
+          </tr>
+          <tr>
+            <td>Receiver Pincode </td>
+            <td><%=@order.receiver_pincode %></td>
+          </tr>
+          <tr>
+            <td>Parcel Weight </td>
+            <td><%=@order.parcel_weight %></td>
+          </tr>
+          <tr>
+            <td>Service type </td>
+            <td><%=@order.service_type %></td>
+          </tr>
+          <tr>
+            <td>Service charges </td>
+            <td><%=@order.service_charges %></td>
+          </tr>
+          <tr>
+            <td>Payment mode </td>
+            <td><%=@order.payment_mode %></td>
+          </tr>
+          <tr>
+            <td>Status </td>
+            <td><%=@order.status %></td>
+          </tr>
+        </tr>
+       </table>
+    </div>
+
+  </div>
+</div>

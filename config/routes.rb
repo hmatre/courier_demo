@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root to: 'dashboard#index'
-  resources :orders, :only => [:new, :create, :show] do
+  resources :orders, :only => [:index,:new, :create, :show] do
     collection do
       get :track_courier_status
     end

@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Your all Couriers</h1>
+  <div class="container">
+    <div>
+      <table class="table table-bordered">
+        <tr>
+          <th>Receiver Name</th>
+          <th>Details</th>
+          <% @orders.each do |order| %>
+            <tr>
+              <td><%= order.receiver_name%></td>
+              <td><%= link_to 'view', order_path(order.id), class: 'btn btn-primary' %></td>
+            </tr>
+          <%end%>
+        </tr>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,13 @@ class OrdersController < ApplicationController
     end
   end
 
+  def index
+    @orders = current_user.orders
+    respond_to do |format|
+      format.html  # show.html.erb
+    end
+  end
+
   def create
     @order = current_user.orders.new(order_params)
     if @order.save
